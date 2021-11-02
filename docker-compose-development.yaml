@@ -1,0 +1,11 @@
+version: '3'
+services: 
+  hello-aws:
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+    ports:
+      - '80:3001'
+    volumes:
+      - .:/app
+      - /app/node_modules
